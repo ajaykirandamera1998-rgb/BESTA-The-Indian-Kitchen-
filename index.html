@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Besta — The Indian Kitchen</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="games.css">
+<link rel="stylesheet" href="intro.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+<!-- Icons: Font Awesome Free 6 (https://github.com/FortAwesome/Font-Awesome), CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="fa-puzzle-piece" viewBox="0 0 512 512"><path d="M192 104.8c0-9.2-5.8-17.3-13.2-22.8C167.2 73.3 160 61.3 160 48c0-26.5 28.7-48 64-48s64 21.5 64 48c0 13.3-7.2 25.3-18.8 34c-7.4 5.5-13.2 13.6-13.2 22.8c0 12.8 10.4 23.2 23.2 23.2l56.8 0c26.5 0 48 21.5 48 48l0 56.8c0 12.8 10.4 23.2 23.2 23.2c9.2 0 17.3-5.8 22.8-13.2c8.7-11.6 20.7-18.8 34-18.8c26.5 0 48 28.7 48 64s-21.5 64-48 64c-13.3 0-25.3-7.2-34-18.8c-5.5-7.4-13.6-13.2-22.8-13.2c-12.8 0-23.2 10.4-23.2 23.2L384 464c0 26.5-21.5 48-48 48l-56.8 0c-12.8 0-23.2-10.4-23.2-23.2c0-9.2 5.8-17.3 13.2-22.8c11.6-8.7 18.8-20.7 18.8-34c0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34c7.4 5.5 13.2 13.6 13.2 22.8c0 12.8-10.4 23.2-23.2 23.2L48 512c-26.5 0-48-21.5-48-48L0 343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2C54.7 344.8 66.7 352 80 352c26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8C40.5 250.2 32.4 256 23.2 256C10.4 256 0 245.6 0 232.8L0 176c0-26.5 21.5-48 48-48l120.8 0c12.8 0 23.2-10.4 23.2-23.2z"/></symbol><symbol id="fa-gamepad" viewBox="0 0 640 512"><path d="M192 64C86 64 0 150 0 256S86 448 192 448l256 0c106 0 192-86 192-192s-86-192-192-192L192 64zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24l0 32 32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0 0 32c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-32-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l32 0 0-32z"/></symbol><symbol id="fa-gift" viewBox="0 0 512 512"><path d="M190.5 68.8L225.3 128l-1.3 0-72 0c-22.1 0-40-17.9-40-40s17.9-40 40-40l2.2 0c14.9 0 28.8 7.9 36.3 20.8zM64 88c0 14.4 3.5 28 9.6 40L32 128c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l448 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-41.6 0c6.1-12 9.6-25.6 9.6-40c0-48.6-39.4-88-88-88l-2.2 0c-31.9 0-61.5 16.9-77.7 44.4L256 85.5l-24.1-41C215.7 16.9 186.1 0 154.2 0L152 0C103.4 0 64 39.4 64 88zm336 0c0 22.1-17.9 40-40 40l-72 0-1.3 0 34.8-59.2C329.1 55.9 342.9 48 357.8 48l2.2 0c22.1 0 40 17.9 40 40zM32 288l0 176c0 26.5 21.5 48 48 48l144 0 0-224L32 288zM288 512l144 0c26.5 0 48-21.5 48-48l0-176-192 0 0 224z"/></symbol><symbol id="fa-camera" viewBox="0 0 512 512"><path d="M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0L362.9 64.8C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></symbol><symbol id="fa-image" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l96 0 32 0 208 0c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></symbol><symbol id="fa-eye" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></symbol><symbol id="fa-medal" viewBox="0 0 512 512"><path d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0L133.9 0c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0L487.4 0C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336a176 176 0 1 1 352 0A176 176 0 1 1 80 336zm184.4-94.9c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z"/></symbol><symbol id="fa-trophy" viewBox="0 0 576 512"><path d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z"/></symbol><symbol id="fa-hand-pointer" viewBox="0 0 448 512"><path d="M128 40c0-22.1 17.9-40 40-40s40 17.9 40 40l0 148.2c8.5-7.6 19.7-12.2 32-12.2c20.6 0 38.2 13 45 31.2c8.8-9.3 21.2-15.2 35-15.2c25.3 0 46 19.5 47.9 44.3c8.5-7.7 19.8-12.3 32.1-12.3c26.5 0 48 21.5 48 48l0 48 0 16 0 48c0 70.7-57.3 128-128 128l-16 0-64 0-.1 0-5.2 0c-5 0-9.9-.3-14.7-1c-55.3-5.6-106.2-34-140-79L8 336c-13.3-17.7-9.7-42.7 8-56s42.7-9.7 56 8l56 74.7L128 40zM240 304c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96zm48-16c-8.8 0-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96c0-8.8-7.2-16-16-16zm80 16c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16s16-7.2 16-16l0-96z"/></symbol><symbol id="fa-forward" viewBox="0 0 512 512"><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3l0 41.7 0 41.7L52.5 440.6zM256 352l0-96 0-128 0-32c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29l0-64z"/></symbol><symbol id="fa-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol><symbol id="fa-flask" viewBox="0 0 448 512"><path d="M288 0L160 0 128 0C110.3 0 96 14.3 96 32s14.3 32 32 32l0 132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512l309.2 0c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5L320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32L288 0zM192 196.8L192 64l64 0 0 132.8c0 23.7 6.6 46.9 19 67.1L309.5 320l-171 0L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol></svg>
+<div id="app">
+
+  <!-- ============ HOME ============ -->
+  <div class="screen active" id="screen-home">
+    <div class="brand-mark">
+      <img src="assets/logo.jpg" alt="Besta — The Indian Kitchen">
+      <div class="brand-name">Besta</div>
+      <div class="brand-sub">The Indian Kitchen</div>
+    </div>
+    <p style="max-width:380px; text-align:center; opacity:.65; margin:22px 0 26px; line-height:1.6; font-size:14.5px;">
+      A little something to enjoy while your table's being prepared.
+    </p>
+    <div id="googleBtnHome"></div>
+    <div class="fine-print">Signing in lets us save your scores and keep you on the leaderboard.</div>
+  </div>
+
+  <!-- ============ NOTIFY / OFFERS POPUP ============ -->
+  <div class="screen" id="screen-notify">
+    <div class="panel" style="width:min(440px,92vw); text-align:center;">
+      <div style="font-size:28px; margin-bottom:10px; color:var(--gold);"><svg class="fa" aria-hidden="true"><use href="#fa-gift"/></svg></div>
+      <h2 style="font-size:22px; margin-bottom:8px;">Unlock Exclusive Offers</h2>
+      <p style="opacity:.65; font-size:14px; line-height:1.6; margin:0 0 20px;">
+        Get notified about surprise coupons, up to 80% off, and dine-in specials at Besta.
+      </p>
+      <div id="notifyNameWrap" style="text-align:left;">
+        <label class="field-label">Your Name</label>
+        <input type="text" class="field-input" id="notifyName" placeholder="e.g. Priya" maxlength="40" autocomplete="off">
+      </div>
+      <label class="field-label" style="text-align:left;">Mobile Number</label>
+      <input type="tel" inputmode="numeric" class="field-input" id="notifyPhone" placeholder="e.g. 98765 43210" maxlength="16" autocomplete="off">
+      <div class="msg" id="notifyMsg"></div>
+      <button class="btn btn-gold" id="notifySaveBtn" style="width:100%;">Notify Me</button>
+      <div class="fine-print" style="margin-top:12px;">By tapping Notify Me, you agree to receive promotional messages from Besta.</div>
+      <button class="btn-text" id="notifySkipBtn" style="margin-top:14px;">Maybe later</button>
+    </div>
+  </div>
+
+  <!-- ============ GAME PICKER ============ -->
+  <div class="screen" id="screen-picker">
+    <div class="label-track" style="margin-bottom:8px;">Welcome</div>
+    <h1 style="font-size:clamp(24px,3.2vw,34px); margin-bottom:26px;">What would you like to play?</h1>
+    <div class="game-grid" id="gameGrid"></div>
+    <button class="btn-text" id="signOutBtn" style="margin-top:30px;">Done — Sign Out</button>
+  </div>
+
+  <!-- ============ TABLE TIME ============ -->
+  <div class="screen" id="screen-orderup-capture">
+    <div class="panel" style="width:min(460px,92vw); text-align:center;">
+      <div class="label-track">Table Time</div>
+      <h2 style="font-size:24px; margin:8px 0 18px;">Take Your Photo</h2>
+      <button class="btn btn-primary" id="ouTakePhotoBtn" style="width:100%; margin-bottom:10px;"><svg class="fa" aria-hidden="true"><use href="#fa-camera"/></svg>Take Your Photo</button>
+      <button class="btn btn-ghost" id="ouGalleryBtn" style="width:100%;"><svg class="fa" aria-hidden="true"><use href="#fa-image"/></svg>Choose from Gallery</button>
+      <input type="file" id="ouCameraInput" accept="image/*" capture="user" style="display:none;">
+      <input type="file" id="ouGalleryInput" accept="image/*" style="display:none;">
+    </div>
+    <button class="btn-text" id="ouBackBtn1" style="margin-top:18px;"><svg class="fa" aria-hidden="true"><use href="#fa-arrow-left"/></svg>Back to games</button>
+  </div>
+
+  <div id="ouCameraOverlay" class="cam-overlay">
+    <video id="ouCameraVideo" autoplay playsinline muted></video>
+    <div style="display:flex; gap:16px; margin-top:22px;">
+      <button class="btn btn-ghost" id="ouCamCancelBtn" style="color:#fff;border-color:#fff;">Cancel</button>
+      <button class="shutter-btn" id="ouCamShutterBtn" aria-label="Take photo"></button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-orderup-puzzle">
+    <div class="puzzle-header">
+      <div class="timer" id="ouTimerLabel">0:00</div>
+      <button class="btn-text" id="ouPeekBtn"><svg class="fa" aria-hidden="true"><use href="#fa-eye"/></svg>Hold to Peek</button>
+    </div>
+    <div id="ouBoardWrap"><div id="ouBoard"></div></div>
+  </div>
+  <div id="ouPeekBackdrop" class="peek-backdrop"></div>
+  <div id="ouPeekThumb" class="peek-thumb"></div>
+
+  <div class="screen" id="screen-orderup-tutorial">
+    <div class="panel" style="width:min(440px,90vw); text-align:center;">
+      <div class="label-track" id="ouTutLabel">Step 1 of 3</div>
+      <div id="ouTutText" style="font-family:var(--font-display); font-size:19px; margin:14px 0; min-height:2.6em;"></div>
+      <div id="ouTutDemo" class="tut-demo">
+        <div class="tut-hand"><svg class="fa" aria-hidden="true"><use href="#fa-hand-pointer"/></svg></div>
+        <div class="tut-tile a"></div>
+        <div class="tut-tile b"></div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+        <button class="btn-text" id="ouTutSkipBtn">Skip<svg class="fa after" aria-hidden="true"><use href="#fa-forward"/></svg></button>
+        <button class="btn btn-ghost" id="ouTutNextBtn">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-orderup-win">
+    <div class="panel" style="width:min(460px,92vw); text-align:center;" id="ouWinPanel">
+      <div class="label-track">Table Time</div>
+      <h2 style="font-size:26px; margin:10px 0;">Solved!</h2>
+      <div style="font-size:15px; opacity:.7; margin-bottom:20px;" id="ouWinTimeLabel">0:00</div>
+      <button class="btn btn-primary" id="ouViewLeaderboardBtn" style="width:100%; margin-bottom:10px;">View Leaderboard</button>
+      <button class="btn btn-ghost" id="ouBackBtn2" style="width:100%;">Back to Games</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-orderup-leaderboard">
+    <div class="panel" style="width:min(440px,92vw); text-align:center;">
+      <div class="label-track">Today's Fastest</div>
+      <h2 style="font-size:22px; margin:8px 0 16px;">Table Time Leaderboard</h2>
+      <div id="ouLbList"></div>
+      <button class="btn btn-primary" id="ouBackBtn3" style="width:100%; margin-top:18px;">Back to Games</button>
+    </div>
+  </div>
+
+  <!-- ============ DASARA ARCADE (Durga Maa vs Asuras) ============ -->
+  <div class="screen" id="screen-durga">
+    <div class="durga-bar">
+      <button class="btn-text" id="durgaBackBtn" style="opacity:.8;"><svg class="fa" aria-hidden="true"><use href="#fa-arrow-left"/></svg>Back to games</button>
+      <div class="label-track">Dasara Arcade</div>
+      <span style="width:110px;"></span>
+    </div>
+    <div class="durga-stage">
+      <iframe id="durgaFrame" title="Dasara Arcade — Durga Maa vs Asuras" allow="autoplay"></iframe>
+      <div id="durgaStatus" class="durga-status">
+        <div id="durgaStatusText">Loading Dasara Arcade…</div>
+        <button class="btn btn-ghost" id="durgaRetryBtn" style="display:none; margin-top:14px;">Try again</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="credit">BESTA · THE INDIAN KITCHEN · VIJAYAWADA</footer>
+</div>
+
+<!-- ANIMATED LOGO INTRO — first thing shown on load. Tapping the arrow
+     skips straight into the app (no-login trial build). -->
+<div id="intro">
+  <div class="stage" id="st"></div>
+  <button id="go" aria-label="Enter the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="games/order-up.js"></script>
+<script src="games/demon-hunt.js"></script>
+<script src="intro.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* ==========================================================
+   BESTA — THE INDIAN KITCHEN · Kiosk App Design System
+   Palette and type are pulled directly from the Besta mark:
+   cream ground, espresso ink, a single warm gold accent,
+   and an olive used only for confirmation states.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root{
+  --cream:        #F4ECDD;
+  --cream-deep:   #EADFC9;
+  --espresso:     #3B2A22;
+  --espresso-ink: #241711;
+  --gold:         #B8863B;
+  --gold-bright:  #D4A450;
+  --olive:        #78815D;
+  --clay:         #A24A32;
+
+  --font-display: 'Fraunces', serif;
+  --font-body:    'Manrope', sans-serif;
+
+  --radius: 3px;
+  --ease: cubic-bezier(.22,1,.36,1);
+}
+
+*{ box-sizing:border-box; }
+html,body{
+  margin:0; padding:0; height:100%; width:100%; overflow:hidden;
+  background:var(--cream);
+  color:var(--espresso);
+  font-family:var(--font-body);
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+
+/* Subtle ground texture: a faint paper-grain feel without an image file */
+body{
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(184,134,59,0.06), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(59,42,34,0.05), transparent 45%);
+}
+
+h1,h2,h3{ font-family:var(--font-display); font-weight:500; margin:0; color:var(--espresso-ink); }
+
+.label-track{
+  font-family:var(--font-body); font-weight:600; font-size:11px;
+  letter-spacing:.22em; color:var(--gold); text-transform:uppercase;
+}
+
+/* ---------- App shell ---------- */
+#app{ position:relative; height:100vh; width:100vw; }
+.screen{
+  position:absolute; inset:0; display:none;
+  align-items:center; justify-content:center; flex-direction:column;
+  padding:5vh 5vw;
+}
+.screen.active{ display:flex; animation:screenIn .5s var(--ease); }
+@keyframes screenIn{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+
+/* ---------- Brand mark ---------- */
+.brand-mark{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+.brand-mark img{ width:clamp(70px,9vw,110px); height:auto; }
+.brand-name{ font-size:clamp(26px,3.4vw,40px); letter-spacing:.01em; }
+.brand-sub{ font-family:var(--font-body); font-weight:600; font-size:11px; letter-spacing:.3em;
+  color:var(--espresso); opacity:.6; text-transform:uppercase; }
+
+/* ---------- Buttons ---------- */
+.btn{
+  font-family:var(--font-body); font-weight:700; font-size:14px;
+  border:none; border-radius:var(--radius); cursor:pointer;
+  padding:15px 30px; letter-spacing:.02em;
+  transition:transform .15s var(--ease), box-shadow .15s var(--ease), background .15s;
+}
+.btn-primary{ background:var(--espresso-ink); color:var(--cream); box-shadow:0 1px 0 rgba(0,0,0,.2); }
+.btn-primary:active{ transform:translateY(2px); }
+.btn-gold{ background:var(--gold); color:var(--espresso-ink); }
+.btn-gold:active{ transform:translateY(2px); }
+.btn-ghost{
+  background:transparent; color:var(--espresso); border:1.5px solid rgba(59,42,34,.3);
+}
+.btn-text{
+  background:none; border:none; font-family:var(--font-body); font-weight:600;
+  font-size:13px; color:var(--espresso); opacity:.55; text-decoration:underline;
+  cursor:pointer; padding:6px;
+}
+
+/* ---------- Card / panel ---------- */
+.panel{
+  background:var(--cream-deep); border-radius:4px;
+  padding:clamp(24px,3.4vw,40px); max-width:94vw;
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 24px 60px rgba(36,23,17,0.22);
+  border:1px solid rgba(59,42,34,.08);
+}
+
+.field-label{ display:block; font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--espresso); opacity:.55; margin-bottom:6px; }
+.field-input{
+  width:100%; font-family:var(--font-body); font-size:15px; padding:13px 14px;
+  border:1.5px solid rgba(59,42,34,.22); border-radius:var(--radius);
+  background:#fff; color:var(--espresso); margin-bottom:16px;
+}
+.field-input:focus{ outline:none; border-color:var(--gold); }
+
+.msg{ font-size:13px; min-height:1.3em; margin-bottom:10px; }
+.msg.error{ color:var(--clay); }
+.msg.success{ color:var(--olive); }
+
+/* ---------- Flower motif divider ---------- */
+.motif{
+  width:34px; height:34px; opacity:.7; margin:18px 0;
+}
+
+/* ---------- Game picker ---------- */
+.game-grid{ display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
+.game-tile{
+  width:220px; background:var(--cream-deep); border-radius:4px; cursor:pointer;
+  padding:26px 20px; text-align:center; border:1px solid rgba(59,42,34,.1);
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.game-tile:active{ transform:scale(.97); }
+.game-tile .icon{ font-size:34px; margin-bottom:10px; display:block; }
+.game-tile h3{ font-size:19px; margin-bottom:6px; }
+.game-tile p{ font-size:12.5px; opacity:.65; margin:0; line-height:1.5; }
+
+/* ---------- Toast / consent strip ---------- */
+.fine-print{ font-size:11px; opacity:.5; max-width:340px; text-align:center; margin-top:14px; line-height:1.5; }
+
+footer.credit{
+  position:absolute; bottom:12px; width:100%; text-align:center;
+  font-size:10px; letter-spacing:.14em; opacity:.3;
+}
+
+/* ---------- Spinner ---------- */
+.spinner{
+  width:18px; height:18px; border:2px solid rgba(59,42,34,.2); border-top-color:var(--espresso);
+  border-radius:50%; display:inline-block; animation:spin .7s linear infinite; vertical-align:middle;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+/* ---------- Font Awesome icons (inline sprite) ---------- */
+.fa{ width:1em; height:1em; fill:currentColor; display:inline-block; vertical-align:-.125em; flex-shrink:0; }
+.btn .fa, .btn-text .fa{ margin-right:.55em; }
+.fa.after{ margin-right:0; margin-left:.55em; }
+.game-tile .icon{ color:var(--gold); }
